@@ -2,8 +2,12 @@
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
+
+
 trigger:
 - main
+
+
 
 resources:
 - repo: self
@@ -17,7 +21,8 @@ variables:
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
-  vmImageName: 'Ubuntu-latest'
+  vmImageName: 'electron'
+
 
 stages:
 - stage: Build
